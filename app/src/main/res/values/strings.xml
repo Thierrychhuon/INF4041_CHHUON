@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Schedule</string>
+
+    <!-- Settings strings -->
     <string name="action_settings">Settings</string>
+
+    <!-- Title -->
+    <string name="hello">Hello World</string>
+
 </resources>
