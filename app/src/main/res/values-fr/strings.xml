@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Emploie du temps</string>
+    <string name="hello">Hello World</string>
+
+    <!-- Boite de dialogue: ajout de tache -->
+    <string name="addtask_dialog">Entrez une nouvelle tâche</string>
+    <string name="question_dialog">Que voulez vous faire ?</string>
+
+
+</resources>

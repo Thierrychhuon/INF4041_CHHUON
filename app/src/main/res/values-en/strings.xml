@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Schedule</string>
+    <string name="hello">Hello World</string>
+
+    <!-- Add tasks dialog -->
+    <string name="addtask_dialog">Add a new task</string>
+    <string name="question_dialog">What do you want to do next ?</string>
+
+</resources>
