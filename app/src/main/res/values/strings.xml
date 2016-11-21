@@ -12,6 +12,16 @@
     <!-- Add tasks dialog -->
     <string name="addtask_dialog">Add a new task</string>
     <string name="question_dialog">What do you want to do next ?</string>
+    <string name="task_title">Add a title</string>
+    <string name="task_start">Start from :</string>
+    <string name="task_time">Set the time needed to complete the task</string>
+    <string name="task_mit">Mit ?</string>
+    <string name="task_cancel">Cancel</string>
+    <string name="task_done">Done</string>
+
+
+
+
 
     <!-- Test -->
         <string name="menu_settings">Settings</string>

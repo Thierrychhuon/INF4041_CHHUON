@@ -1,30 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<!--
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateTaskActivity">
+    android:scrollbars="vertical"> -->
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar2"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CreateTaskActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#58FA58"
+            android:minHeight="?android:attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Début"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:clickable="true"
+            android:layout_below="@+id/editText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="18dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_alignBaseline="@+id/textView4"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_toRightOf="@+id/textView4"
+            android:layout_toEndOf="@+id/textView4" />
+
+        <TextView
+            android:text="@string/task_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/textView2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add a new task"
+            android:id="@+id/textView"
+            android:gravity="center"
+            android:layout_alignBottom="@+id/toolbar2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="17dp" />
+
+    <TextView
+            android:text="@string/task_mit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:id="@+id/textView4"
+            android:layout_below="@+id/seekBar4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:text="@string/task_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:layout_marginTop="45dp"
+            android:layout_below="@+id/checkBox"
+            android:layout_toRightOf="@+id/editText"
+            android:layout_toEndOf="@+id/editText"
+            android:layout_marginLeft="27dp"
+            android:layout_marginStart="27dp" />
+
+        <Button
+            android:text="@string/task_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:layout_alignBaseline="@+id/button"
+            android:layout_alignBottom="@+id/button"
+            android:layout_alignLeft="@+id/checkBox"
+            android:layout_alignStart="@+id/checkBox" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textShortMessage"
+            android:text="@string/task_title"
+            android:ems="10"
+            android:layout_marginTop="34dp"
+            android:id="@+id/editText"
+            android:layout_below="@+id/toolbar2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    <SeekBar
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#58FA58"
-        android:minHeight="?android:attr/actionBarSize"
-        android:layout_alignParentTop="true"
+        android:max="25"
+        android:progress="5"
+        android:layout_marginTop="19dp"
+        android:id="@+id/seekBar4"
+        android:layout_below="@+id/textView3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello"
-        android:layout_marginTop="18dp"
-        android:layout_below="@+id/toolbar2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/textView5"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp" />
 
 </RelativeLayout>
+
+<!--</ScrollView>-->
+
 <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
