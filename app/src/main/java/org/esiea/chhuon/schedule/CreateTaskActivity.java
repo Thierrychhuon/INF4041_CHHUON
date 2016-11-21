@@ -10,6 +10,8 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.view.View;
+import android.app.DialogFragment;
 
 
 /**
@@ -32,7 +34,7 @@ public class CreateTaskActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // Initialize the textview with '0'.
-        textView.setText("Covered: " + seekBar.getProgress()*5 + "mn");
+        textView.setText("Vous allouez: " + seekBar.getProgress()*5 + "mn");
 
         seekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
             int progress = 0;
@@ -61,6 +63,10 @@ public class CreateTaskActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textView5);
     }
 
+    public void onButtonClicked(View v){
+        DialogFragment newFragment = new TimePickerFragment();
+        newFragment.show(getFragmentManager(),"TimePicker");
+    }
 
     //Reading titlefield
         //final EditText titleField = (EditText) findViewById(R.id.editText);
