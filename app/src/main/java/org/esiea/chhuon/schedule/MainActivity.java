@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         switch (id) {
 
             case R.id.action_create_task:
+                updateUI();
                 Intent intent = new Intent(MainActivity.this, CreateTaskActivity.class);
                 startActivity(intent);
                 return true;
@@ -154,5 +155,13 @@ public class MainActivity extends AppCompatActivity {
                 new String[]{task});
         db.close();
         updateUI();
+    }
+
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        updateUI();
+
     }
 }

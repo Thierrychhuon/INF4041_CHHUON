@@ -7,7 +7,7 @@
         android:title="@string/add_task_activity"
         android:orderInCategory="99"
         app:showAsAction="ifRoom"
-        android:icon="@android:drawable/ic_notification_overlay" />
+        android:icon="@android:drawable/ic_menu_add" />
     <item
         android:id="@+id/action_exit"
         android:orderInCategory="100"
