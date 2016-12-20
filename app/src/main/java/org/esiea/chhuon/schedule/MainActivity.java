@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.provider.AlarmClock;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -25,7 +26,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    //private static final String TAG = "MainActivity";
+    private static final String TAG = "MainActivity";
     private TaskDbHelper mHelper;
     private ListView mTaskListView;
     private ArrayAdapter<String> mAdapter;
@@ -37,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
         mHelper = new TaskDbHelper(this);
         mTaskListView = (ListView) findViewById(R.id.list_todo);
-
         updateUI();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -74,7 +74,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 return true;
 
-            case R.id.action_settings:
+            case R.id.action_exit:
+                this.finish();
                 return true;
 
             case R.id.action_add_task:
@@ -102,6 +103,13 @@ public class MainActivity extends AppCompatActivity {
                         .setNegativeButton("Cancel", null)
                         .create();
                 dialog.show();
+                return true;
+
+            case R.id.action_clock:
+                Intent i = new Intent(AlarmClock.ACTION_SET_ALARM);
+                i.putExtra(AlarmClock.EXTRA_HOUR, 0);
+                i.putExtra(AlarmClock.EXTRA_MINUTES, 20);
+                startActivity(i);
                 return true;
 
             default:
