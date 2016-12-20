@@ -7,35 +7,28 @@
     <!-- Menu strings -->
     <string name="action_exit">Exit</string>
     <string name="action_clock">Run Clock</string>
-    <string name="action_add_task">Add Task</string>
-    <string name="add_task_activity">Go to Add task</string>
+    <string name="action_add_task">Set an alarm</string>
+    <string name="add_task_activity">Add task</string>
+
+    <!--dialog -->
+    <string name="positive_button">Set</string>
+    <string name="addtask_dialog">Set an alarm</string>
+    <string name="question_dialog">Please enter the hour :</string>
+    <string name="question_dialog2">Please enter the minutes :</string>
+    <string name="negative_button">Cancel</string>
 
     <!-- Add tasks dialog -->
-    <string name="addtask_dialog">Add a new task</string>
-    <string name="question_dialog">What do you want to do next ?</string>
     <string name="task_title">Add a title</string>
     <string name="task_start">Start from :</string>
     <string name="task_time">Set the time needed to complete the task</string>
-    <string name="task_mit">Mit ?</string>
+    <string name="task_mit">Important?</string>
     <string name="task_cancel">Cancel</string>
     <string name="task_done">Done</string>
+    <string name="modification">Modification complete</string>
+    <string name="set_sentence">You set: </string>
+    <string name="start_at">Click here to set a starting time</string>
 
-
-
-
-
-    <!-- Test -->
-        <string name="menu_settings">Settings</string>
-        <string name="title_activity_main">MainActivity</string>
-        <string name="image_content_description">Un Android avec un chien</string>
-        <string name="create_account">Créer un compte</string>
-        <string name="email">Adresse email</string>
-        <string name="password">Mot de passe</string>
-        <string name="connect">Se connecter</string>
-        <string name="title_activity_login_display">LoginDisplayActivity</string>
-        <string name="hint_mail">"Ici : L'adresse email de l'utilisateur"</string>
-        <string name="hint_pass">"Ici : Le mot de passe de l'utilisateur"</string>
-
+    <string name="test">Test</string>
 
 
 </resources>

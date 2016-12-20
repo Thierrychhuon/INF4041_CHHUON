@@ -12,9 +12,6 @@ import android.app.Dialog;
 import java.util.Calendar;
 import android.widget.TimePicker;
 
-/**
- * Created by admin on 21/11/2016.
- */
 public class TimePickerFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener{
 
     @Override
@@ -24,22 +21,7 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         int hour = c.get(Calendar.HOUR_OF_DAY);
         int minute = c.get(Calendar.MINUTE);
 
-        //Create and return a new instance of TimePickerDialog
-        /*
-            public constructor.....
-            TimePickerDialog(Context context, int theme,
-             TimePickerDialog.OnTimeSetListener callBack, int hourOfDay, int minute, boolean is24HourView)
 
-            The 'theme' parameter allow us to specify the theme of TimePickerDialog
-
-            .......List of Themes.......
-            THEME_DEVICE_DEFAULT_DARK
-            THEME_DEVICE_DEFAULT_LIGHT
-            THEME_HOLO_DARK
-            THEME_HOLO_LIGHT
-            THEME_TRADITIONAL
-
-         */
         TimePickerDialog tpd = new TimePickerDialog(getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT
                 ,this, hour, minute, DateFormat.is24HourFormat(getActivity()));
 

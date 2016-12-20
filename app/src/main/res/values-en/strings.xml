@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Schedule</string>
+    <string name="title_activity_create_task">Add a new task</string>
+
     <string name="hello">Hello World</string>
 
+    <!-- Menu strings -->
+    <string name="action_exit">Exit</string>
+    <string name="action_clock">Run Clock</string>
+    <string name="action_add_task">Set an alarm</string>
+    <string name="add_task_activity">Add task</string>
+
+    <!--dialog -->
+    <string name="positive_button">Set</string>
+    <string name="addtask_dialog">Set an alarm</string>
+    <string name="question_dialog">Please enter the hour :</string>
+    <string name="question_dialog2">Please enter the minutes :</string>
+    <string name="negative_button">Cancel</string>
+
     <!-- Add tasks dialog -->
-    <string name="addtask_dialog">Add a new task</string>
-    <string name="question_dialog">What do you want to do next ?</string>
+    <string name="task_title">Add a title</string>
+    <string name="task_start">Start from :</string>
+    <string name="task_time">Set the time needed to complete the task</string>
+    <string name="task_mit">Important?</string>
+    <string name="task_cancel">Cancel</string>
+    <string name="task_done">Done</string>
+    <string name="modification">Modification complete</string>
+    <string name="set_sentence">You set: </string>
+    <string name="start_at">Click here to set a starting time</string>
+
+    <string name="test">Test</string>
+
+
 
 </resources>

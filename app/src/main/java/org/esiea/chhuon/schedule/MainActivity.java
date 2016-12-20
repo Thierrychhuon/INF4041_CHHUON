@@ -1,6 +1,5 @@
 package org.esiea.chhuon.schedule;
 
-import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -10,6 +9,7 @@ import android.provider.AlarmClock;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.InputType;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,7 +26,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
     private TaskDbHelper mHelper;
     private ListView mTaskListView;
     private ArrayAdapter<String> mAdapter;
@@ -43,14 +42,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        //fab.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View view) {
-        //        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-        //                .setAction("Action", null).show();
-        //    }
-        //});
     }
 
     @Override
@@ -80,36 +71,33 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_add_task:
-                final EditText taskEditText = new EditText(this);
+                final EditText minute = new EditText(this);
+                minute.setInputType(InputType.TYPE_CLASS_NUMBER);
+                final EditText hour = new EditText(this);
+                hour.setInputType(InputType.TYPE_CLASS_NUMBER);
+
                 AlertDialog dialog = new AlertDialog.Builder(this)
                         .setTitle(R.string.addtask_dialog)
                         .setMessage(R.string.question_dialog)
-                        .setView(taskEditText)
-                        .setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                        .setView(hour)
+                        .setMessage(R.string.question_dialog2)
+                        .setView(minute)
+                        .setPositiveButton(R.string.positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                String task = String.valueOf(taskEditText.getText());
-                                SQLiteDatabase db = mHelper.getWritableDatabase();
-                                ContentValues values = new ContentValues();
-                                values.put(TaskContract.TaskEntry.COL_TASK_TITLE, task);
-                                //values.put()
-                                db.insertWithOnConflict(TaskContract.TaskEntry.TABLE,
-                                        null,
-                                        values,
-                                        SQLiteDatabase.CONFLICT_REPLACE);
-                                db.close();
-                                updateUI();
+                                Intent i = new Intent(AlarmClock.ACTION_SET_ALARM);
+                                i.putExtra(AlarmClock.EXTRA_HOUR, hour.getText());
+                                i.putExtra(AlarmClock.EXTRA_MINUTES, minute.getText());
+                                startActivity(i);
                             }
                         })
-                        .setNegativeButton("Cancel", null)
+                        .setNegativeButton(R.string.negative_button, null)
                         .create();
                 dialog.show();
                 return true;
 
             case R.id.action_clock:
                 Intent i = new Intent(AlarmClock.ACTION_SET_ALARM);
-                i.putExtra(AlarmClock.EXTRA_HOUR, 0);
-                i.putExtra(AlarmClock.EXTRA_MINUTES, 20);
                 startActivity(i);
                 return true;
 

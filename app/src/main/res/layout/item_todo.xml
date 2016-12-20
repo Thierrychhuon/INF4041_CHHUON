@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="Hello"
+        android:text="@string/hello"
         android:textSize="20sp" />
 
     <Button
@@ -17,7 +17,37 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="Done"
+        android:text="@string/task_done"
         android:onClick="deleteTask" />
+
+    <TextView
+        android:text="Start at 10:30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/task_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/start_time" />
+
+    <TextView
+        android:text="40mn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/duration"
+        android:layout_alignBaseline="@+id/task_delete"
+        android:layout_alignBottom="@+id/task_delete"
+        android:layout_toLeftOf="@+id/task_delete"
+        android:layout_toStartOf="@+id/task_delete" />
+<!--
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        android:layout_alignBottom="@+id/start_time"
+        android:layout_toLeftOf="@+id/duration"
+        android:layout_toStartOf="@+id/duration"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp"
+        android:id="@+id/imageView" /> -->
 
 </RelativeLayout>

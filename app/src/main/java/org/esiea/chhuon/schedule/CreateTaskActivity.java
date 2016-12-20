@@ -70,7 +70,7 @@ public class CreateTaskActivity extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 textView.setText("Vous allouez: " + progress*5 + "mn");
-                Toast.makeText(getApplicationContext(), "Modification complete", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.modification, Toast.LENGTH_SHORT).show();
             }
         });
     }

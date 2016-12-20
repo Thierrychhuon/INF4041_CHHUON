@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Emploie du temps</string>
+    <string name="title_activity_create_task">Ajoutez une nouvelle tâche</string>
+
     <string name="hello">Hello World</string>
 
-    <!-- Boite de dialogue: ajout de tache -->
-    <string name="addtask_dialog">Entrez une nouvelle tâche</string>
-    <string name="question_dialog">Que voulez vous faire ?</string>
+    <!-- Menu strings -->
+    <string name="action_exit">Quitter</string>
+    <string name="action_clock">Lancer Alarm</string>
+    <string name="action_add_task">Créer une alarm</string>
+    <string name="add_task_activity">Ajouter une tâche</string>
 
+    <!--dialog -->
+    <string name="positive_button">Ajouter</string>
+    <string name="addtask_dialog">Paramétrer une alarme</string>
+    <string name="question_dialog">Veuillez entrer les heures :</string>
+    <string name="question_dialog2">Veuillez entrer les minutes :</string>
+    <string name="negative_button">Annuler</string>
 
+    <!-- Add tasks dialog -->
+    <string name="task_title">Ajouter un titre</string>
+    <string name="task_start">Commence à :</string>
+    <string name="task_time">Entrez la durée de la tâche</string>
+    <string name="task_mit">Important ?</string>
+    <string name="task_cancel">Annuler</string>
+    <string name="task_done">Ajouter</string>
+    <string name="modification">Modification enregistrée</string>
+    <string name="start_at">Cliquez ici pour ajouter une heure de début</string>
+
+    <string name="test">Test</string>
 </resources>
