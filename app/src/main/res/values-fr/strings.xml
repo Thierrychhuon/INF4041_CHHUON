@@ -24,7 +24,7 @@
     <string name="task_time">Entrez la durée de la tâche</string>
     <string name="task_mit">Important ?</string>
     <string name="task_cancel">Annuler</string>
-    <string name="task_done">Ajouter</string>
+    <string name="task_done">Supprimer</string>
     <string name="modification">Modification enregistrée</string>
     <string name="start_at">Cliquez ici pour ajouter une heure de début</string>
 
