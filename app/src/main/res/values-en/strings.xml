@@ -28,6 +28,7 @@
     <string name="modification">Modification complete</string>
     <string name="set_sentence">You set: </string>
     <string name="start_at">Click here to set a starting time</string>
+    <string name="add_task">Add</string>
 
     <string name="test">Test</string>
 

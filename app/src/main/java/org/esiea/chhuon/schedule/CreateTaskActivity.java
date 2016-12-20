@@ -1,13 +1,10 @@
 package org.esiea.chhuon.schedule;
 
-//import android.app.Activity;
 import android.content.ContentValues;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-//import android.widget.CheckBox;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -21,7 +18,6 @@ import android.app.DialogFragment;
 import org.esiea.chhuon.schedule.db.TaskContract;
 import org.esiea.chhuon.schedule.db.TaskDbHelper;
 
-import java.util.ArrayList;
 
 /**
  * Created by admin on 19/11/2016.
@@ -88,6 +84,7 @@ public class CreateTaskActivity extends AppCompatActivity {
     public void onButtonDoneClicked(View v){
         SQLiteDatabase db = mHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
+        task_title = (EditText) findViewById(R.id.editText);
         String task = task_title.getText().toString();
         values.put(TaskContract.TaskEntry.COL_TASK_TITLE, task);
         db.insertWithOnConflict(TaskContract.TaskEntry.TABLE,
@@ -102,6 +99,7 @@ public class CreateTaskActivity extends AppCompatActivity {
     public void onButtonCancelClicked(View v){
         this.finish();
     }
+
     public void ifEditTextClicked(View v){
         task_title = (EditText) findViewById(R.id.editText);
         task_title.setText("");
